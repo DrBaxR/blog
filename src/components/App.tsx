@@ -4,9 +4,13 @@ import '../style/App.css';
 function App() {
   return (
     <div className='app-component'>
-      <div className='nav'>
-        <Link to='/articles'>Blog</Link>
-        <Link to='/me'>About Me</Link>
+      <div className='nav shadow'>
+        <div className='center'>
+          <Link className='link' to='/articles'>Blog</Link>
+        </div>
+        <div className='right'>
+          <Link className='link' to='/me'>About Me</Link>
+        </div>
       </div>
       <Outlet />
     </div>
