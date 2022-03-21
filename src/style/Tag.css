@@ -1,0 +1,18 @@
+.tag-component {
+  background-color: var(--accent);
+  font-size: 13px;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: 20px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.deselected {
+  background-color: var(--primary);
+  color: var(--accent);
+  border-color: var(--accent);
+}
