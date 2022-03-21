@@ -10,12 +10,15 @@ interface Props {
 export const ArticlesSearch: React.FC<Props> = ({ tags }) => {
   return (
     <div className='articles-search-component'>
-      <input type='text' />
+      <div className='search-box'>
+        <input type='text' />
+      </div>
       <div className='tags'>
         {
           tags.map(tag =>
             <Tag
               className='tag'
+              deselected
               key={tag}
               name={tag}
             />

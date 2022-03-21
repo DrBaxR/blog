@@ -1,0 +1,8 @@
+.articles-component {
+  width: 100%;
+}
+
+.articles-component .centered-area {
+  max-width: 1000px;
+  margin: auto;
+}

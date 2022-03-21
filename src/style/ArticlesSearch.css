@@ -1,4 +1,27 @@
+.articles-search-component {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.articles-search-component .search-box {
+  width: 100%;
+  display: flex;
+}
+.articles-search-component .search-box input {
+  flex: 1;
+  height: 30px;
+  border: 1px solid var(--shadow);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+
+.articles-search-component .search-box input:focus {
+  outline: none;
+}
+
 .articles-search-component .tags {
+  width: 100%;
   display: flex;
 }
 
