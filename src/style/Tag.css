@@ -7,12 +7,12 @@
   height: 20px;
   padding: 5px 20px;
   border-radius: 20px;
-  border: 1px solid var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
 .deselected {
-  background-color: var(--primary);
+  background-color: rgba(0, 0, 0, 0);
   color: var(--accent);
   border-color: var(--accent);
 }

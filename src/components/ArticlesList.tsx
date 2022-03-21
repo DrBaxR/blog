@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Article } from '../data/articles';
+import { ArticleCard } from './ArticleCard';
+
+import '../style/ArticlesList.css';
 
 interface Props {
   articles: Article[],
@@ -10,14 +12,13 @@ export const ArticlesList: React.FC<Props> = ({ articles }) => {
   return (
     <div className="articles-list-component">
       {
-        articles.map(article => (
-          <Link
-            to={`/articles/${article.name}`}
+        articles.map(article =>
+          <ArticleCard
             key={article.name}
-          >
-            {article.name}
-          </Link>
-        ))
+            article={article}
+            className='card'
+          />,
+        )
       }
     </div>
   );

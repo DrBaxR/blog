@@ -1,0 +1,25 @@
+.article-card-component {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--primary);
+}
+
+.article-card-component .header {
+  flex: 1;
+  font-size: 24px;
+}
+
+.article-card-component .header .date {
+  font-size: 14px;
+  color: var(--border);
+}
+
+.article-card-component .tags {
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  margin: 0 2px;
+}

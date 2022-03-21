@@ -9,8 +9,14 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    name: 'welcome',
+    title: '👋 Welcome!',
+    date: new Date('2022-03-16'),
+    tags: [Tags.info],
+  },
+  {
     name: 'learning-react-js',
-    title: 'Learning ReactJS',
+    title: '⚛️ Learning ReactJS',
     date: new Date(),
     tags: [Tags.learning, Tags.react],
   },

@@ -10,7 +10,7 @@
 .articles-search-component .search-box input {
   flex: 1;
   height: 30px;
-  border: 1px solid var(--shadow);
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 16px;
   padding: 0px 10px;
