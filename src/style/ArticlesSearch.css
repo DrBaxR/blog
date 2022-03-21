@@ -1,0 +1,9 @@
+.articles-search-component .tags {
+  display: flex;
+}
+
+.articles-search-component .tags .tag {
+  margin: 5px;
+}
+
+
