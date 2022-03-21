@@ -15,3 +15,13 @@ export const articles: Article[] = [
     tags: [Tags.learning, Tags.react],
   }
 ]
+
+export const getTags = (): string[] => {
+  const tags = new Set<string>();
+
+  articles.forEach(article => {
+    article.tags.forEach(tag => { tags.add(tag) })
+  });
+
+  return Array.from(tags);
+}

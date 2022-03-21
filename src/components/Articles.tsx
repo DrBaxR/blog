@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
-import { articles } from "../data/articles";
+import React from "react";
+import { Article } from "../data/articles";
+import { ArticlesList } from "./ArticlesList";
+import { ArticlesSearch } from "./ArticlesSearch";
 
-export const Articles = () => {
+interface Props {
+  articles: Article[],
+  tags: string[],
+}
+
+export const Articles: React.FC<Props> = ({ articles, tags }) => {
   return (
     <div className='articles-component'>
-      <div className='articles'>
-        {articles.map(article =>
-          <Link
-            key={article.name}
-            to={`/articles/${article.name}`}
-          >
-            {article.title  }
-          </Link>
-        )}
-      </div>
+      <ArticlesSearch tags={tags} />
+      <ArticlesList articles={articles} />
     </div>
   )
 }
