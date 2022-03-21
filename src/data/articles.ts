@@ -13,15 +13,15 @@ export const articles: Article[] = [
     title: 'Learning ReactJS',
     date: new Date(),
     tags: [Tags.learning, Tags.react],
-  }
-]
+  },
+];
 
 export const getTags = (): string[] => {
   const tags = new Set<string>();
 
   articles.forEach(article => {
-    article.tags.forEach(tag => { tags.add(tag) })
+    article.tags.forEach(tag => { tags.add(tag); });
   });
 
   return Array.from(tags);
-}
+};

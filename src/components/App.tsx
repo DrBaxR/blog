@@ -1,13 +1,13 @@
+import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import '../style/App.css';
 
-function App() {
-
+function App () {
   const location = useLocation();
 
   const hasFirstPathSegment = (segment: string): boolean => {
     return location.pathname.split('/')[1] === segment;
-  }
+  };
 
   return (
     <div className='app-component'>

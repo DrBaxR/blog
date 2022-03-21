@@ -1,7 +1,7 @@
-import React from "react";
-import { Article } from "../data/articles";
-import { ArticlesList } from "./ArticlesList";
-import { ArticlesSearch } from "./ArticlesSearch";
+import React from 'react';
+import { Article } from '../data/articles';
+import { ArticlesList } from './ArticlesList';
+import { ArticlesSearch } from './ArticlesSearch';
 
 import '../style/Articles.css';
 
@@ -18,5 +18,5 @@ export const Articles: React.FC<Props> = ({ articles, tags }) => {
         <ArticlesList articles={articles} />
       </div>
     </div>
-  )
-}
+  );
+};

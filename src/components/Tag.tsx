@@ -9,16 +9,15 @@ interface Props {
 }
 
 export const Tag: React.FC<Props> = ({ name, className, deselected }) => {
-
   const classes = [
     'tag-component',
     deselected ? 'deselected' : '',
     className,
-  ]
+  ];
 
   return (
     <div className={classes.join(' ')}>
       {name}
     </div>
-  )
-}
+  );
+};
