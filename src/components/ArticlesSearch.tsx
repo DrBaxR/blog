@@ -1,7 +1,7 @@
-import React from 'react'
-import { Tag } from './Tag'
+import React from 'react';
+import { Tag } from './Tag';
 
-import '../style/ArticlesSearch.css'
+import '../style/ArticlesSearch.css';
 
 interface Props {
   tags: string[],
@@ -21,10 +21,10 @@ export const ArticlesSearch: React.FC<Props> = ({ tags }) => {
               deselected
               key={tag}
               name={tag}
-            />
+            />,
           )
         }
       </div>
     </div>
-  )
-}
+  );
+};
