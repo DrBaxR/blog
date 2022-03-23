@@ -17,7 +17,7 @@ export const ArticlesSearch: React.FC<Props> = ({ tags, searchExpression, select
       <div className='search-box'>
         <input
           type='text'
-          placeholder='Some topic or article...'
+          placeholder='Some article...'
           value={searchExpression}
           onChange={onInputChange}
         />
