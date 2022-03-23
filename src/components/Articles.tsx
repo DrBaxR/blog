@@ -15,15 +15,17 @@ interface State {
   filteredArticles: Article[],
 }
 
+type Action = { type: 'search_change', newExpression: string } | { type: 'tag_click', clickedTag: string }
+
 const initialState: State = {
   searchExpression: '',
   selectedTags: [],
   filteredArticles: articles,
 };
 
-const reducer: React.Reducer<State, any> = (state, action) => {
+const reducer: React.Reducer<State, Action> = (state, action) => {
   switch (action.type) {
-    case 'SEARCH': {
+    case 'search_change': {
       const newArticles = getFilteredArticles(action.newExpression, state.selectedTags);
 
       return {
@@ -32,7 +34,7 @@ const reducer: React.Reducer<State, any> = (state, action) => {
         filteredArticles: newArticles,
       };
     }
-    case 'TAG': {
+    case 'tag_click': {
       const newTags = [...state.selectedTags];
       const tagIndex = newTags.findIndex(t => t === action.clickedTag);
       if (tagIndex >= 0) {
@@ -65,8 +67,8 @@ export const Articles: React.FC<Props> = ({ tags }) => {
           tags={tags}
           searchExpression={state.searchExpression}
           selectedTags={state.selectedTags}
-          onInputChange={e => dispatch({ type: 'SEARCH', newExpression: e.target.value })}
-          onTagClick={tag => dispatch({ type: 'TAG', clickedTag: tag })}
+          onInputChange={e => dispatch({ type: 'search_change', newExpression: e.target.value })}
+          onTagClick={tag => dispatch({ type: 'tag_click', clickedTag: tag })}
         />
         <ArticlesList articles={state.filteredArticles} />
       </div>
