@@ -1,5 +1,5 @@
 import React from 'react';
-import { Article, getFilteredArticles } from '../../data/articles';
+import { Article, getFilteredArticles } from './data/articles';
 
 type Action = { type: 'search_change', newExpression: string } | { type: 'tag_click', clickedTag: string }
 

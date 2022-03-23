@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { articles, getTags } from '../../data/articles';
+import { articles, getTags } from './data/articles';
 import { ArticlesList } from './ArticlesList';
 import { ArticlesSearch } from './ArticlesSearch';
 import { reducer, State } from './reducer';

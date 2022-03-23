@@ -1,5 +1,5 @@
 import React from 'react';
-import { Article } from '../../data/articles';
+import { Article } from './data/articles';
 import { ArticleCard } from './ArticleCard';
 
 import './ArticlesList.css';
