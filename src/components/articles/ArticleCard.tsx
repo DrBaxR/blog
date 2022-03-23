@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Article } from '../data/articles';
-import { Tag } from './Tag';
+import { Article } from '../../data/articles';
+import { Tag } from '../common/Tag';
 
-import '../style/ArticleCard.css';
+import './ArticleCard.css';
 
 interface Props {
   article: Article,

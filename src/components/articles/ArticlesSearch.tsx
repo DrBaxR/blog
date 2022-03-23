@@ -1,7 +1,7 @@
 import React from 'react';
-import { Tag } from './Tag';
+import { Tag } from '../common/Tag';
 
-import '../style/ArticlesSearch.css';
+import './ArticlesSearch.css';
 
 interface Props {
   tags: string[],

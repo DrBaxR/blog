@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import '../style/App.css';
+import './App.css';
 
 function App () {
   const location = useLocation();
@@ -9,6 +9,7 @@ function App () {
     return location.pathname.split('/')[1] === segment;
   };
 
+  // TODO: extract nav in component
   return (
     <div className='app-component'>
       <div className='nav shadow'>

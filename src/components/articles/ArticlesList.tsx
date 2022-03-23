@@ -1,8 +1,8 @@
 import React from 'react';
-import { Article } from '../data/articles';
+import { Article } from '../../data/articles';
 import { ArticleCard } from './ArticleCard';
 
-import '../style/ArticlesList.css';
+import './ArticlesList.css';
 
 interface Props {
   articles: Article[],

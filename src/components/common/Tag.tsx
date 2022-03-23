@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../style/Tag.css';
+import './Tag.css';
 
 interface Props {
   name: string,
