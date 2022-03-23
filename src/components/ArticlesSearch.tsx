@@ -11,7 +11,10 @@ export const ArticlesSearch: React.FC<Props> = ({ tags }) => {
   return (
     <div className='articles-search-component'>
       <div className='search-box'>
-        <input type='text' />
+        <input
+          type='text'
+          placeholder='Some topic or article...'
+        />
       </div>
       <div className='tags'>
         {

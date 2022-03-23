@@ -1,3 +1,8 @@
+::placeholder {
+  color: var(--border);
+  font-style: italic;
+}
+
 .articles-search-component {
   width: 100%;
   margin: 30px 0;
@@ -9,7 +14,7 @@
 }
 .articles-search-component .search-box input {
   flex: 1;
-  height: 30px;
+  height: 36px;
   border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 16px;
@@ -28,5 +33,4 @@
 .articles-search-component .tags .tag {
   margin: 5px;
 }
-
 
