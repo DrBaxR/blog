@@ -1,7 +1,7 @@
 .tag-component {
-  background-color: var(--accent);
+  background-color: rgb(var(--accent));
   font-size: 13px;
-  color: white;
+  color: var(--on-accent);
   display: grid;
   place-items: center;
   height: 20px;
@@ -9,10 +9,18 @@
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
+  user-select: none;
+  transition: background-color .1s ease, color .1s ease, border .1s ease;
 }
 
 .deselected {
   background-color: rgba(0, 0, 0, 0);
-  color: var(--accent);
-  border-color: var(--accent);
+  color: rgb(var(--accent));
+  border-color: rgb(var(--accent));
+}
+
+.deselected:hover {
+  background-color: rgba(var(--accent), 0.5);
+  color: var(--on-accent);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
