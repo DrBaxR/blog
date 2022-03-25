@@ -1,0 +1,6 @@
+.code-area-component {
+  background-color: var(--secondary);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+  border-radius: 10px;
+}

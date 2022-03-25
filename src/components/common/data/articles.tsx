@@ -1,7 +1,10 @@
+import React, { ReactElement } from 'react';
+import { Welcome } from '../../article/Welcome';
 import * as Tags from './tags';
 
 export interface Article {
   name: string,
+  component: ReactElement,
   title: string,
   date: Date,
   tags: string[],
@@ -13,66 +16,14 @@ const articles: Article[] = [
     title: '👋 Welcome!',
     date: new Date('2022-03-16'),
     tags: [Tags.info],
+    component: <Welcome />,
   },
   {
     name: 'learning-react-js',
     title: '⚛️ Learning ReactJS',
     date: new Date(),
     tags: [Tags.learning, Tags.react],
-  },
-  {
-    name: 'random1',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random2',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random3',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random4',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random5',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random6',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random7',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random8',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
-  },
-  {
-    name: 'random9',
-    title: '🤷‍♂️ Some Random thing',
-    date: new Date(),
-    tags: [Tags.info],
+    component: <Welcome />,
   },
 ];
 
