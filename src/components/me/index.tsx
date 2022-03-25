@@ -2,6 +2,8 @@ import React from 'react';
 
 export const Me = () => {
   return (
-    <div>Me</div>
+    <div className='me-component view'>
+      Me
+    </div>
   );
 };

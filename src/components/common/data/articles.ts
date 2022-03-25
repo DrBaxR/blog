@@ -46,7 +46,9 @@ export const getFilteredArticles = (searchExpression: string = '', selectedTags:
   return filteredArticles;
 };
 
-export const getArticleByName = (name: string): Article | undefined => {
+export const getArticleByName = (name: string | undefined): Article | undefined => {
+  if (!name) return undefined;
+
   return articles.find(a => a.name === name);
 };
 
