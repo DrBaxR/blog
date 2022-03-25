@@ -2,7 +2,6 @@
   display: flex;
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--primary);
 }
 
 .article-card-component .header {

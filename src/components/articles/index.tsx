@@ -4,6 +4,8 @@ import { ArticlesList } from './ArticlesList';
 import { ArticlesSearch } from './ArticlesSearch';
 import { reducer, State } from './reducer';
 
+import './index.css';
+
 const tags = getTags();
 
 const initialState: State = {
@@ -17,16 +19,14 @@ export const Articles: React.FC = () => {
 
   return (
     <div className='articles-component view'>
-      <div className="centered-area">
-        <ArticlesSearch
-          tags={tags}
-          searchExpression={state.searchExpression}
-          selectedTags={state.selectedTags}
-          onInputChange={e => dispatch({ type: 'search_change', newExpression: e.target.value })}
-          onTagClick={tag => dispatch({ type: 'tag_click', clickedTag: tag })}
-        />
-        <ArticlesList articles={state.filteredArticles} />
-      </div>
+      <ArticlesSearch
+        tags={tags}
+        searchExpression={state.searchExpression}
+        selectedTags={state.selectedTags}
+        onInputChange={e => dispatch({ type: 'search_change', newExpression: e.target.value })}
+        onTagClick={tag => dispatch({ type: 'tag_click', clickedTag: tag })}
+      />
+      <ArticlesList articles={state.filteredArticles} />
     </div>
   );
 };

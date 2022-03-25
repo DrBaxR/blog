@@ -1,0 +1,4 @@
+.articles-component {
+  display: flex;
+  flex-direction: column;
+}
