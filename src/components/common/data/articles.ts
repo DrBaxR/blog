@@ -7,7 +7,7 @@ export interface Article {
   tags: string[],
 }
 
-export const articles: Article[] = [
+const articles: Article[] = [
   {
     name: 'welcome',
     title: '👋 Welcome!',
@@ -38,12 +38,16 @@ export const getTags = (): string[] => {
   return Array.from(tags);
 };
 
-export const getFilteredArticles = (searchExpression: string, selectedTags: string[]): Article[] => {
+export const getFilteredArticles = (searchExpression: string = '', selectedTags: string[] = []): Article[] => {
   let filteredArticles = articles;
   filteredArticles = filterArticlesByExpression(filteredArticles, searchExpression);
   filteredArticles = filterArticlesByTags(filteredArticles, selectedTags);
 
   return filteredArticles;
+};
+
+export const getArticleByName = (name: string): Article | undefined => {
+  return articles.find(a => a.name === name);
 };
 
 const filterArticlesByExpression = (articlesToFilter: Article[], searchExpression: string) => {

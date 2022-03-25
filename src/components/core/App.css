@@ -1,6 +1,8 @@
 .app-component {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-component .nav {
@@ -13,6 +15,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "left center right";
+}
+
+.app-component .view {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1000px;
+  flex: 1;
 }
 
 .app-component .nav .link {
