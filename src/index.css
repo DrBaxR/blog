@@ -1,11 +1,22 @@
 :root {
   --primary: #fff;
   --secondary: #f3f3f3;
-  --accent: 0, 0, 0;
+  --accent: 151, 219, 174;
   --on-primary: #000;
   --on-accent: #fff;
   --shadow: rgba(0, 0, 0, 0.25);
   --border: rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+  --primary: #0d1117;
+  --secondary: #161b22;
+  --accent: 104, 180, 129;
+  --on-primary: rgb(214, 214, 214);
+  --on-secondary: rgb(214, 214, 214);
+  --on-accent: #000;
+  --shadow: rgb(14, 14, 14);
+  --border: rgb(119, 119, 119);
 }
 
 .shadow {

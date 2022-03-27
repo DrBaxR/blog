@@ -1,11 +1,11 @@
 .code-area-component {
-  background-color: var(--secondary);
+  background-color: rgb(28, 29, 33);
+  border: 1px solid var(--secondary);
   font-family: 'Courier New', Courier, monospace;
   border-radius: 10px;
   padding: 10px;
 }
 
 .code-area-component pre {
-  background-color: rgba(0, 0, 0, 0) !important;
   margin: 0;
 }

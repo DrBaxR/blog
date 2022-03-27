@@ -13,6 +13,8 @@
   display: flex;
 }
 .articles-search-component .search-box input {
+  background-color: var(--primary);
+  color: var(--on-primary);
   flex: 1;
   height: 36px;
   border: 1px solid var(--border);

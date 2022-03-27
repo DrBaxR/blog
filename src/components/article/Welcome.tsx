@@ -26,6 +26,7 @@ export const Welcome: React.FC = () => {
         <p>An area that is going to hold code in it, not much more to say about this one... Here{'\''}s an example:</p>
         <CodeArea
           code={codeSample}
+          language='typescript'
         />
       </Section>
       <Section title='Extra Information Areas'>

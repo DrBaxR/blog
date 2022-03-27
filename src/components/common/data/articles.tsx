@@ -22,7 +22,7 @@ const articles: Article[] = [
     name: 'learning-react-js',
     title: '⚛️ Learning ReactJS',
     date: new Date(),
-    tags: [Tags.learning, Tags.react],
+    tags: [Tags.learning],
     component: <Welcome />,
   },
 ];
