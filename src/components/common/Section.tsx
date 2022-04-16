@@ -6,11 +6,9 @@ interface Props {
 
 export const Section: React.FC<Props> = ({ title, children }) => {
   return (
-    <div className='section-component area'>
+    <div className="section-component area">
       <h2>{title}</h2>
-      {
-        children
-      }
+      {children}
     </div>
   );
 };

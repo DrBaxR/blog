@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { LearningReactJS } from '../../article/LearningReactJS';
 import { Welcome } from '../../article/Welcome';
 import * as Tags from './tags';
 
@@ -23,7 +24,7 @@ const articles: Article[] = [
     title: '⚛️ Learning ReactJS',
     date: new Date(),
     tags: [Tags.learning],
-    component: <Welcome />,
+    component: <LearningReactJS />,
   },
 ];
 

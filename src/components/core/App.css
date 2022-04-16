@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   background-color: var(--primary);
-  color: var(--on-primary)
+  color: var(--on-primary);
+  overflow: auto;
 }
 
 .app-component .nav {
@@ -37,7 +38,7 @@
   width: calc(100% - 20px);
   max-width: 1000px;
   flex: 1;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .nav .link:link {
