@@ -45,6 +45,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+code .code {
+  background-color: var(--secondary);
+  padding: 4px;
+  border-radius: 8px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -54,7 +60,7 @@ body {
 ::-webkit-scrollbar-track {
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--secondary);

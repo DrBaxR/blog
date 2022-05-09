@@ -5,6 +5,13 @@
   margin: 18px 0;
 }
 
+.extra-info-component .title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
 .green {
   background-color: rgba(205, 255, 190, 0.75);
   border-color: rgb(89, 141, 73);

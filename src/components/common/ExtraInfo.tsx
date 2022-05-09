@@ -4,9 +4,10 @@ import './ExtraInfo.css';
 
 interface Props {
   type: 'tip' | 'note' | 'danger';
+  title: string;
 }
 
-export const ExtraInfo: React.FC<Props> = ({ children, type }) => {
+export const ExtraInfo: React.FC<Props> = ({ children, type, title }) => {
   const getExtraClass = (): string => {
     switch (type) {
       case 'tip':
@@ -20,5 +21,10 @@ export const ExtraInfo: React.FC<Props> = ({ children, type }) => {
 
   const classes: string[] = ['extra-info-component', getExtraClass()];
 
-  return <div className={classes.join(' ')}>{children}</div>;
+  return (
+    <div className={classes.join(' ')}>
+      <div className="title">{title}</div>
+      {children}
+    </div>
+  );
 };

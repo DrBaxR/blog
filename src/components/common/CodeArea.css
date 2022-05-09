@@ -1,4 +1,8 @@
 .code-area-component {
+  margin: 18px 0;
+}
+
+.code-area-component .code-area-code {
   background-color: rgb(28, 29, 33);
   font-family: 'Courier New', Courier, monospace;
   border-radius: 10px;

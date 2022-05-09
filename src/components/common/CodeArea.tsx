@@ -5,16 +5,20 @@ import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import './CodeArea.css';
 
 interface Props {
-  code: string,
-  language: string,
+  code: string;
+  language: string;
+  title: string;
 }
 
-export const CodeArea: React.FC<Props> = ({ code }) => {
+export const CodeArea: React.FC<Props> = ({ code, language, title }) => {
   return (
-    <div className='code-area-component'>
-      <SyntaxHighlighter language='javascript' style={anOldHope}>
-        {code}
-      </SyntaxHighlighter>
+    <div className="code-area-component">
+      {title}
+      <div className="code-area-code">
+        <SyntaxHighlighter language={language} style={anOldHope}>
+          {code}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 };
