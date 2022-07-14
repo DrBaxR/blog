@@ -1,0 +1,3 @@
+ol.bold > li::marker {
+  font-weight: bold;
+}

@@ -8,6 +8,7 @@ export interface Article {
   component: ReactElement,
   title: string,
   date: Date,
+  updated?: Date,
   tags: string[],
 }
 

@@ -32,7 +32,7 @@ export const Welcome: React.FC = () => {
           An area that is going to hold code in it, not much more to say about
           this one... Here{"'"}s an example:
         </p>
-        <CodeArea code={codeSample} language="typescript" />
+        <CodeArea title="Some code" code={codeSample} language="typescript" />
       </Section>
       <Section title="Extra Information Areas">
         <p>
@@ -41,7 +41,7 @@ export const Welcome: React.FC = () => {
           use them yet).
         </p>
         <p>Area that will contain tips, good practices and stuff like that:</p>
-        <ExtraInfo type="tip">
+        <ExtraInfo title="Tip" type="tip">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
           tempore velit sapiente modi dolores nobis obcaecati at quod id porro
           quidem veritatis odio consequuntur distinctio, doloribus nam
@@ -52,9 +52,9 @@ export const Welcome: React.FC = () => {
         </ExtraInfo>
         <p>
           Area that will contain notes or a summary of what I said before
-          (something like a <i>TL;DR</i>):
+          (something like a TL;DR):
         </p>
-        <ExtraInfo type="note">
+        <ExtraInfo title="Note" type="note">
           <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing
           elit. Sint quos ut illo perspiciatis. Eos voluptatum eveniet dicta
           autem dolor consequuntur voluptatem harum? Nam, recusandae assumenda
@@ -63,11 +63,14 @@ export const Welcome: React.FC = () => {
           aspernatur exercitationem rerum, debitis architecto accusantium non
           reiciendis id.
         </ExtraInfo>
-        <p>Area that will contain errors in code or <strong>really</strong> important stuff:</p>
-        <ExtraInfo type="danger">
-          <i>Lorem ipsum</i> dolor sit amet consectetur adipisicing elit.
-          Numquam atque vitae perferendis, magnam ut eos at aspernatur quo
-          corporis sunt voluptatem sapiente molestias quasi voluptatibus aut.{' '}
+        <p>
+          Area that will contain errors in code or <strong>really</strong>{' '}
+          important stuff:
+        </p>
+        <ExtraInfo title="Danger" type="danger">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam atque
+          vitae perferendis, magnam ut eos at aspernatur quo corporis sunt
+          voluptatem sapiente molestias quasi voluptatibus aut.{' '}
           <strong>Dolorum tempora</strong> doloremque, corrupti culpa rem fuga
           natus recusandae harum, sint itaque eaque suscipit?
         </ExtraInfo>

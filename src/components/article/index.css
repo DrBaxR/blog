@@ -1,3 +1,13 @@
 .article-component {
   font-size: large;
 }
+
+.article-component h1.title {
+  margin-bottom: 5px;
+}
+
+.date {
+  font-style: italic;
+  color: var(--border);
+  margin-bottom: 30px;
+}

@@ -13,7 +13,7 @@ interface Props {
 export const CodeArea: React.FC<Props> = ({ code, language, title }) => {
   return (
     <div className="code-area-component">
-      {title}
+      <code>{title}</code>
       <div className="code-area-code">
         <SyntaxHighlighter language={language} style={anOldHope}>
           {code}
