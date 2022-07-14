@@ -18,7 +18,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "left center right";
+  grid-template-areas: 'left center right';
 }
 
 .app-component .actions {
@@ -39,6 +39,10 @@
   max-width: 1000px;
   flex: 1;
   /* overflow-y: hidden; */
+}
+
+.nav {
+  min-height: 52px;
 }
 
 .nav .link:link {
