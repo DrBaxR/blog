@@ -4,12 +4,12 @@ import { Welcome } from '../../article/Welcome';
 import * as Tags from './tags';
 
 export interface Article {
-  name: string,
-  component: ReactElement,
-  title: string,
-  date: Date,
-  updated?: Date,
-  tags: string[],
+  name: string;
+  component: ReactElement;
+  title: string;
+  date: Date;
+  updated?: Date;
+  tags: string[];
 }
 
 const articles: Article[] = [
@@ -23,7 +23,8 @@ const articles: Article[] = [
   {
     name: 'learning-react-js',
     title: '⚛️ Learning ReactJS',
-    date: new Date(),
+    date: new Date('2022-03-18'),
+    updated: new Date('2022-04-14'),
     tags: [Tags.learning],
     component: <LearningReactJS />,
   },
@@ -32,32 +33,45 @@ const articles: Article[] = [
 export const getTags = (): string[] => {
   const tags = new Set<string>();
 
-  articles.forEach(article => {
-    article.tags.forEach(tag => { tags.add(tag); });
+  articles.forEach((article) => {
+    article.tags.forEach((tag) => {
+      tags.add(tag);
+    });
   });
 
   return Array.from(tags);
 };
 
-export const getFilteredArticles = (searchExpression: string = '', selectedTags: string[] = []): Article[] => {
+export const getFilteredArticles = (
+  searchExpression: string = '',
+  selectedTags: string[] = [],
+): Article[] => {
   let filteredArticles = articles;
-  filteredArticles = filterArticlesByExpression(filteredArticles, searchExpression);
+  filteredArticles = filterArticlesByExpression(
+    filteredArticles,
+    searchExpression,
+  );
   filteredArticles = filterArticlesByTags(filteredArticles, selectedTags);
 
   return filteredArticles;
 };
 
-export const getArticleByName = (name: string | undefined): Article | undefined => {
+export const getArticleByName = (
+  name: string | undefined,
+): Article | undefined => {
   if (!name) return undefined;
 
-  return articles.find(a => a.name === name);
+  return articles.find((a) => a.name === name);
 };
 
-const filterArticlesByExpression = (articlesToFilter: Article[], searchExpression: string) => {
+const filterArticlesByExpression = (
+  articlesToFilter: Article[],
+  searchExpression: string,
+) => {
   if (searchExpression.length <= 0) return articlesToFilter;
 
   const searchTerm = searchExpression.trim().toLowerCase().split(' ').join();
-  return articlesToFilter.filter(article => {
+  return articlesToFilter.filter((article) => {
     const articleTerm = article.title.toLowerCase().split(' ').join();
 
     return articleTerm.includes(searchTerm);
@@ -67,10 +81,12 @@ const filterArticlesByExpression = (articlesToFilter: Article[], searchExpressio
 const filterArticlesByTags = (articlesToFilter: Article[], tags: string[]) => {
   if (tags.length <= 0) return articlesToFilter;
 
-  return articlesToFilter.filter(article => {
+  return articlesToFilter.filter((article) => {
     let hasAllTags = true;
 
-    tags.forEach(tag => { if (!article.tags.some(t => t === tag)) hasAllTags = false; });
+    tags.forEach((tag) => {
+      if (!article.tags.some((t) => t === tag)) hasAllTags = false;
+    });
 
     return hasAllTags;
   });

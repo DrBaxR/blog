@@ -12,9 +12,11 @@ export const Article = () => {
     <div className="article-component view">
       <h1 className="title">{article?.title}</h1>
       <div className="date">
-        <div>Created: {article?.date.toDateString()}</div>
         <div>
-          Updated:{' '}
+          <b>Created:</b> {article?.date.toDateString()}
+        </div>
+        <div>
+          <b>Updated:</b>{' '}
           {article?.updated?.toDateString() ?? article?.date.toDateString()}
         </div>
       </div>
