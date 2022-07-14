@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { getArticleByName } from '../common/data/articles';
 
-import './index.css';
+import './Article.css';
 
 export const Article = () => {
   const params = useParams();

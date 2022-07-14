@@ -4,7 +4,7 @@ import { ArticlesList } from './ArticlesList';
 import { ArticlesSearch } from './ArticlesSearch';
 import { reducer, State } from './reducer';
 
-import './index.css';
+import './Articles.css';
 
 const tags = getTags();
 
@@ -18,13 +18,15 @@ export const Articles: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <div className='articles-component view'>
+    <div className="articles-component view">
       <ArticlesSearch
         tags={tags}
         searchExpression={state.searchExpression}
         selectedTags={state.selectedTags}
-        onInputChange={e => dispatch({ type: 'search_change', newExpression: e.target.value })}
-        onTagClick={tag => dispatch({ type: 'tag_click', clickedTag: tag })}
+        onInputChange={(e) =>
+          dispatch({ type: 'search_change', newExpression: e.target.value })
+        }
+        onTagClick={(tag) => dispatch({ type: 'tag_click', clickedTag: tag })}
       />
       <ArticlesList articles={state.filteredArticles} />
     </div>
