@@ -8,7 +8,7 @@ function App () {
   const [darkThemeEnabled, setDarkThemeEnabled] = useState(() => {
     const enabled = localStorage.getItem('darkTheme');
 
-    return enabled !== null ? JSON.parse(enabled) as boolean : false;
+    return enabled !== null ? (JSON.parse(enabled) as boolean) : false;
   });
 
   useEffect(() => {
@@ -22,30 +22,30 @@ function App () {
   // TODO: extract nav in component
   return (
     <div className={`app-component ${darkThemeEnabled ? 'dark' : ''}`}>
-      <div className='nav shadow'>
-        <div className='actions'>
+      <div className="nav shadow">
+        <div className="actions">
           <button
-            onClick={() => setDarkThemeEnabled(prev => !prev)}
-            className='theme-button'
+            onClick={() => setDarkThemeEnabled((prev) => !prev)}
+            className="theme-button"
           >
-            {darkThemeEnabled ? <BsLightbulbOffFill size='25px' /> : <BsLightbulbFill size='25px' />}
+            {darkThemeEnabled
+              ? (
+              <BsLightbulbOffFill size="25px" />
+                )
+              : (
+              <BsLightbulbFill size="25px" />
+                )}
           </button>
         </div>
         <div className={hasFirstPathSegment('articles') ? 'center' : 'right'}>
-          <Link
-            className='link'
-            to='/articles'
-          >
+          <Link className="link" to="/articles">
             Blog
           </Link>
         </div>
         <div className={hasFirstPathSegment('me') ? 'center' : 'right'}>
-          <Link
-            className='link'
-            to='/me'
-          >
+          <a className="link" href="https://me.andiflorea.dev">
             About Me
-          </Link>
+          </a>
         </div>
       </div>
       <Outlet />
